@@ -2449,7 +2449,8 @@
          l_meltsliq      ! mass of snow melt local           (kg/m^2)
 
       real (kind=dbl_kind) :: &
-         pond            ! water retained in ponds                (m)
+         pond,           & ! water retained in ponds                (m)
+         taf               ! LM added temporal adjustment factor
 
       logical (kind=log_kind), save :: &
          first_call = .true. ! first call flag
@@ -2928,6 +2929,8 @@
                                fiso_evapn=fiso_evapn)
 
             if (icepack_warnings_aborted(subname)) return
+
+            taf=(flwout-flw)/(5.67e-8*Tsfc(n)**4-flw) ! LM added
 
          endif
 
