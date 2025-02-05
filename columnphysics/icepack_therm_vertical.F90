@@ -2930,7 +2930,7 @@
 
             if (icepack_warnings_aborted(subname)) return
 
-            taf=(flwout-flw)/(5.67e-8*Tsfc(n)**4-flw) ! LM added
+            taf=flwout !(flwout-flw)/(5.67e-8*Tsfc(n)**4-flw) ! LM added
 
          endif
 
