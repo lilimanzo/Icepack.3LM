@@ -94,7 +94,8 @@
          fcondtop    , & ! downward cond flux at top surface (W m-2)
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
-         flwoutn         ! upward LW at surface (W m-2)
+         flwoutn     , & ! upward LW at surface (W m-2)
+         TsfK            ! LM added (413)
 
     real (kind=dbl_kind), intent(out):: &
          fcondbot    , & ! downward cond flux at bottom surface (W m-2)
