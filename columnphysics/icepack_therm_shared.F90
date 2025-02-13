@@ -130,7 +130,7 @@
 
       ! local variables
       real(kind=dbl_kind) :: &
-         TsfK        , & ! ice/snow surface temperature (K)
+         !TsfK        , & ! ice/snow surface temperature (K) - LM commented
          Qsfc        , & ! saturated surface specific humidity (kg/kg)
          qsat        , & ! the saturation humidity of air (kg/m^3)
          flwdabs     , & ! downward longwave absorbed heat flx (W/m^2)
