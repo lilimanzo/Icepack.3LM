@@ -1354,6 +1354,7 @@
                                   fadvheat,           &
                                   flwoutn,  fsensn,   &
                                   flatn,    fsurfn,   &
+                                  TsfK,               & ! LM added
                                   qpond,    qocn,     &
                                   Spond,    sss,      &
                                   q,        dSdt,     &
@@ -1389,7 +1390,7 @@
                                    fadvheat,           &
                                    flwoutn,  fsensn,   &
                                    flatn,    fsurfn,   &
-                                   TsfK,               &
+                                   TsfK,               & ! LM added
                                    qpond,    qocn,     &
                                    Spond,    sss,      &
                                    q,        dSdt,     &
