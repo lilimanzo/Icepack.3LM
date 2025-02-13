@@ -54,6 +54,7 @@
                                           sss,                &
                                           fsensn,   flatn,    &
                                           flwoutn,  fsurfn,   &
+                                          TsfK,               & ! LM added
                                           fcondtop, fcondbot, &
                                           fadvheat, snoice,   &
                                           smice,    smliq)
@@ -309,7 +310,7 @@
                                     Spond,       sss,        &
                                     hilyr,       hslyr,      &
                                     fcondtop,    fcondbot,   &
-                                    fadvheat,                &
+                                    fadvheat,    TsfK,       & ! LM added 414
                                     flwoutn,     fsensn,     &
                                     flatn,       fsurfn      )
 
@@ -669,9 +670,9 @@
                                      Spond,       sss,        &
                                      hilyr,       hslyr,      &
                                      fcondtop,    fcondbot,   &
-                                     fadvheat,                &
+                                     fadvheat,    TsfK,       & ! LM added TsfK
                                      flwoutn,     fsensn,     &
-                                     flatn,       fsurfn      )
+                                     flatn,       fsurfn      ) 
 
     ! solve the vertical temperature and salt change for case with no snow
     ! 1) determine what type of surface condition existed previously - cold or melting
@@ -690,7 +691,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          fsurfn      , & ! net flux to top surface, excluding fcondtop
-         fadvheat        ! flow of heat to ocean due to advection (W m-2)
+         fadvheat    , & ! flow of heat to ocean due to advection (W m-2)
+         TsfK            ! LM added
 
     real(kind=dbl_kind), intent(in) :: &
          Tsf0            ! ice surface temperature (C) at beginning of timestep
