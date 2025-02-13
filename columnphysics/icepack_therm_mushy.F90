@@ -1100,6 +1100,7 @@
                            fcondtop, fcondbot, &
                            fadvheat,           &
                            flwoutn,  fsensn,   &
+                           TsfK,               & ! LM added
                            flatn,    fsurfn,   &
                            qpond,    qocn,     &
                            Spond,    sss,      &
@@ -1380,6 +1381,7 @@
                                    fadvheat,           &
                                    flwoutn,  fsensn,   &
                                    flatn,    fsurfn,   &
+                                   TsfK,               &
                                    qpond,    qocn,     &
                                    Spond,    sss,      &
                                    q,        dSdt,     &

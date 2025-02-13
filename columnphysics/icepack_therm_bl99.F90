@@ -66,6 +66,7 @@
                                       Tsf,      Tbot,     &
                                       fsensn,   flatn,    &
                                       flwoutn,  fsurfn,   &
+                                      TsfK,               & ! LM added
                                       fcondtopn,fcondbot, &
                                       einit               )
 
@@ -900,6 +901,7 @@
                                  shcoef,     lhcoef,            &
                                  flwoutn,    fsensn,            &
                                  flatn,      fsurfn,            &
+                                 TsfK,                          & ! LM added
                                  dflwout_dT, dfsens_dT,         &
                                  dflat_dT,   dfsurf_dT)
 
