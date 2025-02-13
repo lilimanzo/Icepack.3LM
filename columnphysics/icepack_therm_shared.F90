@@ -103,7 +103,8 @@
                                    potT,    Qa,     &
                                    shcoef,  lhcoef, &
                                    flwoutn, fsensn, &
-                                   flatn,   fsurfn)
+                                   flatn,   fsurfn, &
+                                   TsfK) ! LM added TsfK
 
       ! input surface temperature
       real(kind=dbl_kind), intent(in) :: &
@@ -124,7 +125,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          flwoutn     , & ! upward LW at surface (W m-2)
-         fsurfn          ! net flux to top surface, excluding fcondtopn
+         fsurfn      , & ! net flux to top surface, excluding fcondtopn
+         TsfK            ! LM added output temp variable
 
       ! local variables
       real(kind=dbl_kind) :: &
@@ -147,8 +149,7 @@
 
       ! longwave radiative flux
       flwdabs =  emissivity * flw
-      !flwoutn = -emissivity * stefan_boltzmann * TsfK**4  ! orig
-      flwoutn = - stefan_boltzmann * TsfK**4  ! LM removed emissivity factor
+      flwoutn = -emissivity * stefan_boltzmann * TsfK**4 
       
       ! downward latent and sensible heat fluxes
       fsensn = shcoef * (potT - TsfK)

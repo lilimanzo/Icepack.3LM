@@ -180,8 +180,8 @@
          fswabs     = fswabs   + fswabsn   * aicen
       if (present(flwoutn) .and. present(flwout) .and. present(flw)) &
          flwout     = flwout   &
-              !+ (flwoutn - (c1-emissivity)*flw) * aicen ! orig
-              + flwoutn * aicen ! LM added
+               + (flwoutn - (c1-emissivity)*flw) * aicen ! orig
+              !+ flwoutn * aicen ! LM added
       if (present(evapn) .and. present(evap)) &
          evap       = evap     + evapn     * aicen
       if (present(evapsn) .and. present(evaps)) &

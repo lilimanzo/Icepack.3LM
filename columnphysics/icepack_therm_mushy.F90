@@ -1235,7 +1235,8 @@
                               potT,    Qa,     &
                               shcoef,  lhcoef, &
                               flwoutn, fsensn, &
-                              flatn,   fsurfn)
+                              flatn,   fsurfn, &
+                              TsfK) ! LM added TsfK
        if (icepack_warnings_aborted(subname)) return
 
        ! derivative of heat flux with respect to surface temperature
@@ -1317,7 +1318,8 @@
                            potT,    Qa,     &
                            shcoef,  lhcoef, &
                            flwoutn, fsensn, &
-                           flatn,   fsurfn)
+                           flatn,   fsurfn, &
+                           TsfK)  ! LM added TsfK
     if (icepack_warnings_aborted(subname)) return
 
     ! if not converged
