@@ -172,7 +172,8 @@
          flwoutn , & ! outgoing longwave radiation (W/m^2)
          evapn   , & ! evaporative water flux (kg/m^2/s)
          evapsn  , & ! evaporative water flux over snow (kg/m^2/s)
-         evapin      ! evaporative water flux over ice (kg/m^2/s)
+         evapin  , & ! evaporative water flux over ice (kg/m^2/s)
+         TsfK        ! LM added 415
 
       ! Note: these are intent out if calc_Tsfc = T, otherwise intent in
       real (kind=dbl_kind), intent(inout):: &
