@@ -1142,7 +1142,8 @@
          flwoutn       , & ! upward LW at surface (W m-2)
          fsensn        , & ! surface downward sensible heat (W m-2)
          flatn         , & ! surface downward latent heat (W m-2)
-         fsurfn            ! net flux to top surface, excluding fcondtop
+         fsurfn        , & ! net flux to top surface, excluding fcondtop
+         TsfK              ! LM added
 
     real(kind=dbl_kind), intent(in) :: &
          dt            , & ! time step (s)
