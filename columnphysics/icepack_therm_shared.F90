@@ -147,8 +147,9 @@
 
       ! longwave radiative flux
       flwdabs =  emissivity * flw
-      flwoutn = -emissivity * stefan_boltzmann * TsfK**4 +1 !* 0.5 ! LM changed +1
-
+      !flwoutn = -emissivity * stefan_boltzmann * TsfK**4  ! orig
+      flwoutn = - stefan_boltzmann * TsfK**4  ! LM removed emissivity factor
+      
       ! downward latent and sensible heat fluxes
       fsensn = shcoef * (potT - TsfK)
       flatn  = lhcoef * (Qa - Qsfc)
