@@ -918,7 +918,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          flwoutn     , & ! upward LW at surface (W m-2)
-         fsurfn          ! net flux to top surface, excluding fcondtopn
+         fsurfn      , & ! net flux to top surface, excluding fcondtopn
+         TsfK            ! LM added
 
       real (kind=dbl_kind), intent(inout) :: &
          dfsens_dT   , & ! deriv of fsens wrt Tsf (W m-2 deg-1)
