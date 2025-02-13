@@ -322,6 +322,7 @@
                                               sss,                  &
                                               fsensn,    flatn,     &
                                               flwoutn,   fsurfn,    &
+                                              TsfK,                 & ! LM added
                                               fcondtopn, fcondbotn, &
                                               fadvocn,   snoice,    &
                                               smice,     smliq)

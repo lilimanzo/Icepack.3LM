@@ -465,6 +465,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
+                          TsfK,               & ! LM added
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -509,6 +510,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
+                             TsfK,               & ! LM added
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -561,6 +563,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
+                          TsfK,               &  ! LM added
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -609,6 +612,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
+                             TsfK,               & ! LM added
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -765,6 +769,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
+                          TsfK,               & ! LM added
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -807,6 +812,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
+                             TsfK,               & ! LM added
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -860,6 +866,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
+                          TsfK,               & ! LM added
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -907,6 +914,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
+                             TsfK,               & ! LM added
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
