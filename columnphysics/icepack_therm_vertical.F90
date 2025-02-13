@@ -98,6 +98,7 @@
                                   fsensn,      flatn,     &
                                   flwoutn,     evapn,     &
                                   evapsn,      evapin,    &
+                                  TsfK,                   & ! LM added 416
                                   freshn,      fsaltn,    &
                                   fhocnn,      frain,     &
                                   meltt,       melts,     &
@@ -2722,6 +2723,7 @@
                                  fsensn=fsensn   (n), flatn=flatn         (n), &
                                  flwoutn=flwoutn,     evapn=evapn,             &
                                  evapsn=evapsn,       evapin=evapin,           &
+                                 TsfK=TsfK,                                    & ! LM added 416
                                  freshn=freshn,       fsaltn=fsaltn,           &
                                  fhocnn=fhocnn,       frain=frain,             &
                                  meltt=melttn    (n), melts=meltsn        (n), &
