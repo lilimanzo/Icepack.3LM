@@ -264,7 +264,7 @@
                                   Spond,       sss,        &
                                   hilyr,       hslyr,      &
                                   fcondtop,    fcondbot,   &
-                                  fadvheat,                &
+                                  fadvheat,    TsfK,       & ! LM added TsfK
                                   flwoutn,     fsensn,     &
                                   flatn,       fsurfn      )
 
@@ -365,7 +365,7 @@
                                    Spond,       sss,        &
                                    hilyr,       hslyr,      &
                                    fcondtop,    fcondbot,   &
-                                   fadvheat,                &
+                                   fadvheat,    TsfK,       & ! LM added
                                    flwoutn,     fsensn,     &
                                    flatn,       fsurfn      )
 
@@ -386,7 +386,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          fsurfn      , & ! net flux to top surface, excluding fcondtop
-         fadvheat        ! flow of heat to ocean due to advection (W m-2)
+         fadvheat    , & ! flow of heat to ocean due to advection (W m-2)
+         TsfK            ! LM added
 
     real(kind=dbl_kind), intent(in) :: &
          Tsf0            ! snow surface temperature (C) at beginning of timestep
@@ -465,7 +466,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
-                          TsfK,               & ! LM added -or here??
+                          TsfK,               & ! LM added   error here.
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
