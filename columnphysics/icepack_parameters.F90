@@ -184,7 +184,7 @@
 
       real (kind=dbl_kind), public :: &
          ! (Briegleb JGR 97 11475-11485  July 1992)
-         emissivity = 0.885_dbl_kind,&! emissivity of snow and ice LM changed .985 to .885
+         emissivity = 0.985_dbl_kind,&! emissivity of snow and ice LM tried changing
          albocn     = 0.06_dbl_kind ,&! ocean albedo
          vonkar     = 0.4_dbl_kind  ,&! von Karman constant
          stefan_boltzmann = 567.0e-10_dbl_kind,&!  W/m^2/K^4
