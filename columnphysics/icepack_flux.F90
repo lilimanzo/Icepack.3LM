@@ -38,7 +38,7 @@
                                fswabsn,  flwoutn,    &
                                evapn,                &
                                evapsn,   evapin,     &
-                               Trefn,    Qrefn,      &
+                               Trefn, TsfK, Qrefn,   & ! LM added TsfK
                                freshn,   fsaltn,     &
                                fhocnn,   fswthrun,   &
                                fswthrun_vdr, fswthrun_vdf,&
@@ -51,7 +51,7 @@
                                fswabs,   flwout,     &
                                evap,                 &
                                evaps,    evapi,      &
-                               Tref,     Qref,       &
+                               Tref, TsfKr, Qref,    & ! LM added TsfKr
                                fresh,    fsalt,      &
                                fhocn,    fswthru,    &
                                fswthru_vdr, fswthru_vdf,&
@@ -86,6 +86,7 @@
           evapsn  , & ! evaporation over snow           (kg/m2/s)
           evapin  , & ! evaporation over ice            (kg/m2/s)
           Trefn   , & ! air tmp reference level         (K)
+          TsfK    , & ! LM radiative temp               (K)
           Qrefn   , & ! air sp hum reference level      (kg/kg)
           freshn  , & ! fresh water flux to ocean       (kg/m2/s)
           fsaltn  , & ! salt flux to ocean              (kg/m2/s)
@@ -120,6 +121,7 @@
           evaps   , & ! evaporation over snow           (kg/m2/s)
           evapi   , & ! evaporation over ice            (kg/m2/s)
           Tref    , & ! air tmp reference level         (K)
+          TsfKr   , & ! LM radiative temp               (K)
           Qref    , & ! air sp hum reference level      (kg/kg)
           fresh   , & ! fresh water flux to ocean       (kg/m2/s)
           fsalt   , & ! salt flux to ocean              (kg/m2/s)
@@ -181,7 +183,6 @@
       if (present(flwoutn) .and. present(flwout) .and. present(flw)) &
          flwout     = flwout   &
                + (flwoutn - (c1-emissivity)*flw) * aicen ! orig
-              !+ flwoutn * aicen ! LM added
       if (present(evapn) .and. present(evap)) &
          evap       = evap     + evapn     * aicen
       if (present(evapsn) .and. present(evaps)) &

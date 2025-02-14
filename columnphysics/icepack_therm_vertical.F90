@@ -2894,7 +2894,7 @@
                                fswabsn=fswabsn,   flwoutn=flwoutn,  &
                                evapn=evapn,                         &
                                evapsn=evapsn,     evapin=evapin,    &
-                               Trefn=Trefn,       Qrefn=Qrefn,      &
+                               Trefn=Trefn, TsfK=TsfK, Qrefn=Qrefn, & ! LM added TsfK
                                freshn=freshn,     fsaltn=fsaltn,    &
                                fhocnn=fhocnn,                       &
                                fswthrun=fswthrun(n),                &
@@ -2910,7 +2910,7 @@
                                fswabs=fswabs,     flwout=flwout,    &
                                evap=evap,                           &
                                evaps=evaps,       evapi=evapi,      &
-                               Tref=Tref,         Qref=Qref,        &
+                               Tref=Tref, TsfKr=TsfKr, Qref=Qref,   & ! LM added TsfKr
                                fresh=fresh,       fsalt=fsalt,      &
                                fhocn=fhocn,                         &
                                fswthru=fswthru,                     &
