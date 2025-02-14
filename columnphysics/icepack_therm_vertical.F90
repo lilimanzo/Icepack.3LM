@@ -2420,7 +2420,7 @@
          strairxn    , & ! air/ice zonal  stress,             (N/m^2)
          strairyn    , & ! air/ice meridional stress,         (N/m^2)
          Cdn_atm_ratio_n, & ! drag coefficient ratio
-         TsfK        , & ! LM radiative temp                      (K)
+         !TsfK        , & ! LM radiative temp                      (K)
          Trefn       , & ! air tmp reference level                (K)
          Urefn       , & ! air speed reference level            (m/s)
          Qrefn       , & ! air sp hum reference level         (kg/kg)
