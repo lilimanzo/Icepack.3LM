@@ -302,6 +302,7 @@
             Qa   = Qa(i),   rhoa = rhoa(i),  &
             Qa_iso = Qa_iso(i,:),            &
             Tair = Tair(i), Tref = Tref(i),  &
+            TsfKr=TsfKr(i),                  & ! LM added
             Qref = Qref(i), Uref = Uref(i),  &
             Qref_iso = Qref_iso(i,:),        &
             Cdn_atm_ratio = Cdn_atm_ratio(i),&
