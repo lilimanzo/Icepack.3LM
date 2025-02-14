@@ -122,7 +122,7 @@
       use icedrv_flux, only: frain, Tair, strairxT, strairyT, fsurf
       use icedrv_flux, only: fcondtop, fcondbot, fsens, fresh, fsalt, fhocn
       use icedrv_flux, only: flat, fswabs, flwout, evap, evaps, evapi
-      use icedrv_flux, only: Tref, Qref, Qref_iso, Uref
+      use icedrv_flux, only: Tref, Qref, Qref_iso, Uref, TsfKr ! LM added TsfKr
       use icedrv_flux, only: meltt, melts, meltb, congel, snoice
       use icedrv_flux, only: fswthru, fswthru_vdr, fswthru_vdf, fswthru_idr, fswthru_idf
       use icedrv_flux, only: flatn_f, fsensn_f, fsurfn_f, fcondtopn_f
