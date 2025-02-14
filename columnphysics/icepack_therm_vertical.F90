@@ -2255,6 +2255,7 @@
          congel      , & ! basal ice growth         (m/step-->cm/day)
          snoice      , & ! snow-ice formation       (m/step-->cm/day)
          Tref        , & ! 2m atm reference temperature           (K)
+         TsfKr       , & ! LM radiative temp                      (K)
          Qref        , & ! 2m atm reference spec humidity     (kg/kg)
          Uref        , & ! 10m atm reference wind speed         (m/s)
          Cdn_atm     , & ! atm drag coefficient
@@ -2419,7 +2420,7 @@
          strairxn    , & ! air/ice zonal  stress,             (N/m^2)
          strairyn    , & ! air/ice meridional stress,         (N/m^2)
          Cdn_atm_ratio_n, & ! drag coefficient ratio
-         TsfKr       , & ! LM radiative temp                      (K)
+         TsfK        , & ! LM radiative temp                      (K)
          Trefn       , & ! air tmp reference level                (K)
          Urefn       , & ! air speed reference level            (m/s)
          Qrefn       , & ! air sp hum reference level         (kg/kg)
