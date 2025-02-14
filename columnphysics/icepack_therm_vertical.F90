@@ -345,6 +345,7 @@
                                      Tsf,       Tbot,      &
                                      fsensn,    flatn,     &
                                      flwoutn,   fsurfn,    &
+                                     TsfK,                 &  ! LM added 418
                                      fcondtopn, fcondbotn,  &
                                      einit                 )
             if (icepack_warnings_aborted(subname)) return
