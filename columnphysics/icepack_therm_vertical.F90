@@ -2423,7 +2423,8 @@
          Qrefn       , & ! air sp hum reference level         (kg/kg)
          shcoef      , & ! transfer coefficient for sensible heat
          lhcoef      , & ! transfer coefficient for latent heat
-         rfrac           ! water fraction retained for melt ponds
+         rfrac       , & ! water fraction retained for melt ponds
+         TsfK            ! LM added 417
 
       real (kind=dbl_kind), dimension(nslyr,ncat) :: &
          massicen    , & ! mass of ice in snow               (kg/m^2)
