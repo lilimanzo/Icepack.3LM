@@ -51,7 +51,8 @@
                                fswabs,   flwout,     &
                                evap,                 &
                                evaps,    evapi,      &
-                               Tref, TsfKr, Qref,    & ! LM added TsfKr
+                               !Tref, TsfKr, Qref,    & ! LM added TsfKr
+                               Tref,     Qref,       &
                                fresh,    fsalt,      &
                                fhocn,    fswthru,    &
                                fswthru_vdr, fswthru_vdf,&
@@ -121,7 +122,7 @@
           evaps   , & ! evaporation over snow           (kg/m2/s)
           evapi   , & ! evaporation over ice            (kg/m2/s)
           Tref    , & ! air tmp reference level         (K)
-          TsfKr   , & ! LM radiative temp               (K)
+          !TsfKr   , & ! LM radiative temp               (K)
           Qref    , & ! air sp hum reference level      (kg/kg)
           fresh   , & ! fresh water flux to ocean       (kg/m2/s)
           fsalt   , & ! salt flux to ocean              (kg/m2/s)
@@ -191,8 +192,8 @@
          evapi      = evapi    + evapin    * aicen
       if (present(Trefn) .and. present(Tref)) &
          Tref       = Tref     + Trefn     * aicen
-      if (present(TsfK) .and. present(TsfKr)) &    ! LM added
-         TsfKr      = TsfKr    + TsfK      * aicen ! LM added
+      !if (present(TsfK) .and. present(TsfKr)) &    ! LM added
+      !   TsfKr      = TsfKr    + TsfK      * aicen ! LM added
       if (present(Qrefn) .and. present(Qref)) &
          Qref       = Qref     + Qrefn     * aicen
 

@@ -2137,7 +2137,7 @@
                                     wind        , zlvl        , &
                                     Qa          , rhoa        , &
                                     Qa_iso      , &
-                                    Tair        , Tref , TsfKr, & ! LM added TsfKr
+                                    Tair        , Tref ,&! TsfKr, & ! LM added TsfKr
                                     Qref        , Uref        , &
                                     Qref_iso    , &
                                     Cdn_atm_ratio,              &
@@ -2255,7 +2255,7 @@
          congel      , & ! basal ice growth         (m/step-->cm/day)
          snoice      , & ! snow-ice formation       (m/step-->cm/day)
          Tref        , & ! 2m atm reference temperature           (K)
-         TsfKr       , & ! LM radiative temp                      (K)
+         !TsfKr       , & ! LM radiative temp                      (K)
          Qref        , & ! 2m atm reference spec humidity     (kg/kg)
          Uref        , & ! 10m atm reference wind speed         (m/s)
          Cdn_atm     , & ! atm drag coefficient
@@ -2912,7 +2912,8 @@
                                fswabs=fswabs,     flwout=flwout,    &
                                evap=evap,                           &
                                evaps=evaps,       evapi=evapi,      &
-                               Tref=Tref, TsfKr=TsfKr, Qref=Qref,   & ! LM added TsfKr
+                               !Tref=Tref, TsfKr=TsfKr, Qref=Qref,   & ! LM added TsfKr
+                               Tref=Tref,         Qref=Qref,        &
                                fresh=fresh,       fsalt=fsalt,      &
                                fhocn=fhocn,                         &
                                fswthru=fswthru,                     &
