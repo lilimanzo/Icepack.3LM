@@ -151,6 +151,9 @@
           fiso_ocn, & ! isotope fluxes to ocean         (kg/m2/s)
           fiso_evap   ! isotope evaporation             (kg/m2/s)
 
+      ! local variable initially LM added
+          real(kind=dbl_kind) :: TsfKr   ! LM added aggregated radiative temperature 
+
       character(len=*),parameter :: subname='(merge_fluxes)'
 
       !-----------------------------------------------------------------
@@ -192,8 +195,8 @@
          evapi      = evapi    + evapin    * aicen
       if (present(Trefn) .and. present(Tref)) &
          Tref       = Tref     + Trefn     * aicen
-      !if (present(TsfK) .and. present(TsfKr)) &    ! LM added
-      !   TsfKr      = TsfKr    + TsfK      * aicen ! LM added
+      if (present(TsfK) .and. present(TsfKr)) &    ! LM added
+         TsfKr      = TsfKr    + TsfK     * aicen ! LM added
       if (present(Qrefn) .and. present(Qref)) &
          Qref       = Qref     + Qrefn     * aicen
 
