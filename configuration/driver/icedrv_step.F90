@@ -122,7 +122,7 @@
       use icedrv_flux, only: frain, Tair, strairxT, strairyT, fsurf
       use icedrv_flux, only: fcondtop, fcondbot, fsens, fresh, fsalt, fhocn
       use icedrv_flux, only: flat, fswabs, flwout, evap, evaps, evapi
-      use icedrv_flux, only: Tref, Qref, Qref_iso, Uref!, TsfKr ! LM added TsfKr
+      use icedrv_flux, only: Tref, Qref, Qref_iso, Uref, TsfKr ! LM added TsfKr
       use icedrv_flux, only: meltt, melts, meltb, congel, snoice
       use icedrv_flux, only: fswthru, fswthru_vdr, fswthru_vdf, fswthru_idr, fswthru_idf
       use icedrv_flux, only: flatn_f, fsensn_f, fsurfn_f, fcondtopn_f
@@ -302,7 +302,7 @@
             Qa   = Qa(i),   rhoa = rhoa(i),  &
             Qa_iso = Qa_iso(i,:),            &
             Tair = Tair(i), Tref = Tref(i),  &
-            !TsfKr=TsfKr(i),                  & ! LM added
+            TsfKr=TsfKr(i),                  & ! LM added 462
             Qref = Qref(i), Uref = Uref(i),  &
             Qref_iso = Qref_iso(i,:),        &
             Cdn_atm_ratio = Cdn_atm_ratio(i),&
