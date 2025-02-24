@@ -65,7 +65,8 @@
                                Uref,     Urefn,      &
                                Qref_iso, Qrefn_iso,  &
                                fiso_ocn, fiso_ocnn,  &
-                               fiso_evap, fiso_evapn)
+                               fiso_evap, fiso_evapn,&
+                               TsfKr) ! LM added
 
       ! single category fluxes
       real (kind=dbl_kind), intent(in) :: &
@@ -195,8 +196,8 @@
          evapi      = evapi    + evapin    * aicen
       if (present(Trefn) .and. present(Tref)) &
          Tref       = Tref     + Trefn     * aicen
-      if (present(TsfK) .and. present(TsfKr)) &    ! LM added
-         TsfKr      = TsfKr    + TsfK     * aicen ! LM added
+      !if (present(TsfK) .and. present(TsfKr)) &    ! LM added
+      !   TsfKr      = TsfKr    + TsfK     * aicen ! LM added
       if (present(Qrefn) .and. present(Qref)) &
          Qref       = Qref     + Qrefn     * aicen
 

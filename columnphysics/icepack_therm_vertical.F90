@@ -2935,7 +2935,7 @@
                                fiso_ocn=fiso_ocn,                   &
                                fiso_ocnn=fiso_ocnn,                 &
                                fiso_evap=fiso_evap,                 &
-                               fiso_evapn=fiso_evapn)
+                               fiso_evapn=fiso_evapn, TsfKr=TsfKr) ! LM added TsfKr
 
             if (icepack_warnings_aborted(subname)) return
 
