@@ -2137,7 +2137,7 @@
                                     wind        , zlvl        , &
                                     Qa          , rhoa        , &
                                     Qa_iso      , &
-                                    Tair        , Tref ,&! TsfKr, & ! LM added TsfKr
+                                    Tair        , Tref , TsfKr, & ! LM added TsfKr
                                     Qref        , Uref        , &
                                     Qref_iso    , &
                                     Cdn_atm_ratio,              &
