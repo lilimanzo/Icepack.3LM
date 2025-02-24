@@ -2138,7 +2138,7 @@
                                     wind        , zlvl        , &
                                     Qa          , rhoa        , &
                                     Qa_iso      , &
-                                    Tair        , Tref , TsfKr, & ! LM added TsfKr
+                                    Tair        , Tref ,&! TsfKr, & ! LM added TsfKr
                                     Qref        , Uref        , &
                                     Qref_iso    , &
                                     Cdn_atm_ratio,              &
@@ -2206,7 +2206,7 @@
                                     lmask_n     , lmask_s     , &
                                     mlt_onset   , frz_onset   , &
                                     yday        , prescribed_ice, &
-                                    zlvs        , afsdn)
+                                    zlvs        , afsdn, TsfKr) ! LM added TsfKr
 
       real (kind=dbl_kind), intent(in) :: &
          dt          , & ! time step

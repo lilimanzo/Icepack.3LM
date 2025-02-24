@@ -167,7 +167,7 @@
          rsnwn, smicen, smliqn
 
       real (kind=dbl_kind) :: &
-         puny, TsfKr ! LM added TsfKr
+         puny!, TsfKr ! LM added TsfKr
 
       character(len=*), parameter :: subname='(step_therm1)'
 
@@ -302,7 +302,7 @@
             Qa   = Qa(i),   rhoa = rhoa(i),  &
             Qa_iso = Qa_iso(i,:),            &
             Tair = Tair(i), Tref = Tref(i),  &
-            TsfKr=TsfKr(i),                  & ! LM added 462
+            !TsfKr=TsfKr(i),                  & ! LM added 462
             Qref = Qref(i), Uref = Uref(i),  &
             Qref_iso = Qref_iso(i,:),        &
             Cdn_atm_ratio = Cdn_atm_ratio(i),&
@@ -374,7 +374,7 @@
             afsdn         = trcrn       (i,nt_fsd:nt_fsd+nfsd-1,:), &
             lmask_n  = lmask_n(i),    lmask_s   = lmask_s(i),     &
             mlt_onset=mlt_onset(i),   frz_onset = frz_onset(i),   &
-            yday = yday,  prescribed_ice = prescribed_ice)
+            yday = yday,  prescribed_ice = prescribed_ice, TsfKr=TsfKr(i)) ! LM added TsfKr 468
 
         if (tr_aero) then
           do n = 1, ncat
