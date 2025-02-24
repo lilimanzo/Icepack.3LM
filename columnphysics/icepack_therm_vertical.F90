@@ -2250,6 +2250,7 @@
          fswabs      , & ! shortwave flux absorbed in ice and ocean (W/m^2)
          flw         , & ! incoming longwave radiation        (W/m^2)
          flwout      , & ! outgoing longwave radiation        (W/m^2)
+         TsfKr       , & ! LM added radiative temp
          evap        , & ! evaporative water flux          (kg/m^2/s)
          evaps       , & ! evaporative water flux over snow(kg/m^2/s)
          evapi       , & ! evaporative water flux over ice (kg/m^2/s)
