@@ -2255,7 +2255,7 @@
          congel      , & ! basal ice growth         (m/step-->cm/day)
          snoice      , & ! snow-ice formation       (m/step-->cm/day)
          Tref        , & ! 2m atm reference temperature           (K)
-         !TsfKr       , & ! LM radiative temp                      (K)
+         TsfKr       , & ! LM radiative temp                      (K)
          Qref        , & ! 2m atm reference spec humidity     (kg/kg)
          Uref        , & ! 10m atm reference wind speed         (m/s)
          Cdn_atm     , & ! atm drag coefficient
