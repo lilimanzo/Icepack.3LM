@@ -167,7 +167,7 @@
          rsnwn, smicen, smliqn
 
       real (kind=dbl_kind) :: &
-         puny
+         puny, TsfKr ! LM added TsfKr
 
       character(len=*), parameter :: subname='(step_therm1)'
 
