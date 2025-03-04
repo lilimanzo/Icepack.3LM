@@ -142,7 +142,7 @@
          fswint_ai,& ! SW absorbed in ice interior below surface (W/m^2)
          flwout  , & ! outgoing longwave radiation (W/m^2)
          Tref    , & ! 2m atm reference temperature (K)
-         !TsfKr   , & ! LM added radiative temp (K)
+         TsfKr   , & ! LM added radiative temp (K)
          Qref    , & ! 2m atm reference spec humidity (kg/kg)
          Uref    , & ! 10m atm reference wind speed (m/s)
          evap    , & ! evaporative water flux (kg/m^2/s)
@@ -521,7 +521,7 @@
       evaps   (:) = c0
       evapi   (:) = c0
       Tref    (:) = c0
-      !TsfKr   (:) = c0 ! LM added
+      TsfKr   (:) = c0 ! LM added
       Qref    (:) = c0
       Uref    (:) = c0
       alvdr   (:) = c0
@@ -595,7 +595,7 @@
       evaps   (:) = c0
       evapi   (:) = c0
       Tref    (:) = c0
-      !TsfKr   (:) = c0 ! LM added
+      TsfKr   (:) = c0 ! LM added
       Qref    (:) = c0
       Uref    (:) = c0
       fiso_evap(:,:) = c0   ! isotope evaporation rate (kg/m2/s)
