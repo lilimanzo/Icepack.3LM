@@ -123,7 +123,7 @@
           evaps   , & ! evaporation over snow           (kg/m2/s)
           evapi   , & ! evaporation over ice            (kg/m2/s)
           Tref    , & ! air tmp reference level         (K)
-          TsfKr   , & ! LM radiative temp               (K)
+          !TsfKr   , & ! LM radiative temp               (K) 584 commented
           Qref    , & ! air sp hum reference level      (kg/kg)
           fresh   , & ! fresh water flux to ocean       (kg/m2/s)
           fsalt   , & ! salt flux to ocean              (kg/m2/s)
@@ -153,7 +153,7 @@
           fiso_evap   ! isotope evaporation             (kg/m2/s)
 
       ! output variable initially LM added
-          !real(kind=dbl_kind), optional, intent(out)  :: TsfKr   ! LM added aggregated radiative temperature 
+          real(kind=dbl_kind), optional, intent(out)  :: TsfKr   ! LM added aggregated radiative temperature- 584 uncommented
 
       character(len=*),parameter :: subname='(merge_fluxes)'
 
