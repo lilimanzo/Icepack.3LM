@@ -2206,7 +2206,7 @@
                                     lmask_n     , lmask_s     , &
                                     mlt_onset   , frz_onset   , &
                                     yday        , prescribed_ice, &
-                                    zlvs        , afsdn, TsfKr) ! LM added TsfKr
+                                    zlvs        , afsdn)!, TsfKr) ! LM added TsfKr
 
       real (kind=dbl_kind), intent(in) :: &
          dt          , & ! time step
@@ -2250,14 +2250,13 @@
          fswabs      , & ! shortwave flux absorbed in ice and ocean (W/m^2)
          flw         , & ! incoming longwave radiation        (W/m^2)
          flwout      , & ! outgoing longwave radiation        (W/m^2)
-         !TsfKr       , & ! LM added radiative temp
          evap        , & ! evaporative water flux          (kg/m^2/s)
          evaps       , & ! evaporative water flux over snow(kg/m^2/s)
          evapi       , & ! evaporative water flux over ice (kg/m^2/s)
          congel      , & ! basal ice growth         (m/step-->cm/day)
          snoice      , & ! snow-ice formation       (m/step-->cm/day)
          Tref        , & ! 2m atm reference temperature           (K)
-         TsfKr       , & ! LM radiative temp                      (K)
+         !TsfKr       , & ! LM radiative temp                      (K)
          Qref        , & ! 2m atm reference spec humidity     (kg/kg)
          Uref        , & ! 10m atm reference wind speed         (m/s)
          Cdn_atm     , & ! atm drag coefficient
@@ -2422,7 +2421,6 @@
          strairxn    , & ! air/ice zonal  stress,             (N/m^2)
          strairyn    , & ! air/ice meridional stress,         (N/m^2)
          Cdn_atm_ratio_n, & ! drag coefficient ratio
-         !TsfK        , & ! LM radiative temp                      (K)
          Trefn       , & ! air tmp reference level                (K)
          Urefn       , & ! air speed reference level            (m/s)
          Qrefn       , & ! air sp hum reference level         (kg/kg)
@@ -2914,7 +2912,6 @@
                                fswabs=fswabs,     flwout=flwout,    &
                                evap=evap,                           &
                                evaps=evaps,       evapi=evapi,      &
-                               !Tref=Tref, TsfKr=TsfKr, Qref=Qref,   & ! LM added TsfKr
                                Tref=Tref,         Qref=Qref,        &
                                fresh=fresh,       fsalt=fsalt,      &
                                fhocn=fhocn,                         &
@@ -2937,7 +2934,7 @@
                                fiso_ocn=fiso_ocn,                   &
                                fiso_ocnn=fiso_ocnn,                 &
                                fiso_evap=fiso_evap,                 &
-                               fiso_evapn=fiso_evapn, TsfKr=TsfKr) ! LM added TsfKr
+                               fiso_evapn=fiso_evapn)!, TsfKr=TsfKr) ! LM added TsfKr
 
             if (icepack_warnings_aborted(subname)) return
 
