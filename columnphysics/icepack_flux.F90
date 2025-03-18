@@ -197,8 +197,8 @@
       if (present(Trefn) .and. present(Tref)) &
          Tref       = Tref     + Trefn     * aicen
       if (present(TsfK) .and. present(TsfKr)) &    ! LM added
-      !   TsfKr      = TsfKr    + TsfK     * aicen ! LM added
-         TsfKr      = TsfKr    + ((-flwoutn/(5.67e-8))**0.25)   * aicen ! LM added
+         TsfKr      = TsfKr    + TsfK     * aicen ! LM added
+      !   TsfKr      = TsfKr    + ((-flwoutn/(5.67e-8))**0.25)   * aicen ! LM added
       if (present(Qrefn) .and. present(Qref)) &
          Qref       = Qref     + Qrefn     * aicen
 
