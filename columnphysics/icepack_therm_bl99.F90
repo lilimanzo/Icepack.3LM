@@ -66,7 +66,7 @@
                                       Tsf,      Tbot,     &
                                       fsensn,   flatn,    &
                                       flwoutn,  fsurfn,   &
-                                      TsfK,               & ! LM added
+                                      !TsfK,               & ! 697
                                       fcondtopn,fcondbot, &
                                       einit               )
 
@@ -102,8 +102,8 @@
          fcondtopn   , & ! downward cond flux at top surface (W m-2)
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
-         flwoutn     , & ! upward LW at surface (W m-2)
-         TsfK            ! LM added
+         flwoutn     !, & ! upward LW at surface (W m-2)
+         !TsfK            ! 697
 
       real (kind=dbl_kind), intent(out):: &
          fcondbot        ! downward cond flux at bottom surface (W m-2)
@@ -361,8 +361,8 @@
                                       potT   , Qa    , &
                                       shcoef , lhcoef, &
                                       flwoutn, fsensn, &
-                                      flatn  , fsurfn, &
-                                      TsfK) ! LM added TsfK
+                                      flatn  , fsurfn)!, & 697
+                                      !TsfK) ! LM added TsfK 697
                if (icepack_warnings_aborted(subname)) return
 
                ! derivative of heat flux with respect to surface temperature
@@ -901,7 +901,7 @@
                                  shcoef,     lhcoef,            &
                                  flwoutn,    fsensn,            &
                                  flatn,      fsurfn,            &
-                                 TsfK,                          & ! LM added
+                                 !TsfK,                          & ! 697
                                  dflwout_dT, dfsens_dT,         &
                                  dflat_dT,   dfsurf_dT)
 
@@ -921,8 +921,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          flwoutn     , & ! upward LW at surface (W m-2)
-         fsurfn      , & ! net flux to top surface, excluding fcondtopn
-         TsfK            ! LM added
+         fsurfn      !, & ! net flux to top surface, excluding fcondtopn
+         !TsfK            ! 697
 
       real (kind=dbl_kind), intent(inout) :: &
          dfsens_dT   , & ! deriv of fsens wrt Tsf (W m-2 deg-1)
@@ -940,8 +940,8 @@
                              potT,    Qa,     &
                              shcoef,  lhcoef, &
                              flwoutn, fsensn, &
-                             flatn,   fsurfn, &
-                             TsfK) ! LM added TsfK
+                             flatn,   fsurfn)!, & 697
+                             !TsfK) ! LM added TsfK 697
       if (icepack_warnings_aborted(subname)) return
 
       ! derivative of heat flux with respect to surface temperature

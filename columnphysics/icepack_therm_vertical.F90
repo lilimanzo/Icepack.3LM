@@ -98,7 +98,7 @@
                                   fsensn,      flatn,     &
                                   flwoutn,     evapn,     &
                                   evapsn,      evapin,    &
-                                  TsfK,                   & ! LM added 416
+                                  !TsfK,                   & ! LM 697
                                   freshn,      fsaltn,    &
                                   fhocnn,      frain,     &
                                   meltt,       melts,     &
@@ -173,8 +173,8 @@
          flwoutn , & ! outgoing longwave radiation (W/m^2)
          evapn   , & ! evaporative water flux (kg/m^2/s)
          evapsn  , & ! evaporative water flux over snow (kg/m^2/s)
-         evapin  , & ! evaporative water flux over ice (kg/m^2/s)
-         TsfK        ! LM added 415
+         evapin  !, & ! evaporative water flux over ice (kg/m^2/s)
+         !TsfK        ! LM 697
 
       ! Note: these are intent out if calc_Tsfc = T, otherwise intent in
       real (kind=dbl_kind), intent(inout):: &
@@ -249,7 +249,7 @@
       !-----------------------------------------------------------------
 
       flwoutn = c0
-      TsfK    = c0 ! LM added
+      !TsfK    = c0 ! LM 697
       evapn   = c0
       evapsn  = c0
       evapin  = c0
@@ -325,7 +325,7 @@
                                               sss,                  &
                                               fsensn,    flatn,     &
                                               flwoutn,   fsurfn,    &
-                                              TsfK,                 & ! LM added
+                                              !TsfK,                 & ! LM 697
                                               fcondtopn, fcondbotn, &
                                               fadvocn,   snoice,    &
                                               smice,     smliq)
@@ -346,7 +346,7 @@
                                      Tsf,       Tbot,      &
                                      fsensn,    flatn,     &
                                      flwoutn,   fsurfn,    &
-                                     TsfK,                 &  ! LM added 418
+                                     !TsfK,                 &  ! LM 697
                                      fcondtopn, fcondbotn,  &
                                      einit                 )
             if (icepack_warnings_aborted(subname)) return
@@ -2426,8 +2426,8 @@
          Qrefn       , & ! air sp hum reference level         (kg/kg)
          shcoef      , & ! transfer coefficient for sensible heat
          lhcoef      , & ! transfer coefficient for latent heat
-         rfrac       , & ! water fraction retained for melt ponds
-         TsfK            ! LM added 417
+         rfrac       !, & ! water fraction retained for melt ponds
+         !TsfK            ! LM 697
 
       real (kind=dbl_kind), dimension(nslyr,ncat) :: &
          massicen    , & ! mass of ice in snow               (kg/m^2)
@@ -2727,7 +2727,7 @@
                                  fsensn=fsensn   (n), flatn=flatn         (n), &
                                  flwoutn=flwoutn,     evapn=evapn,             &
                                  evapsn=evapsn,       evapin=evapin,           &
-                                 TsfK=TsfK,                                    & ! LM added 416
+                                 !TsfK=TsfK,                                    & ! LM 697
                                  freshn=freshn,       fsaltn=fsaltn,           &
                                  fhocnn=fhocnn,       frain=frain,             &
                                  meltt=melttn    (n), melts=meltsn        (n), &
@@ -2896,7 +2896,7 @@
                                fswabsn=fswabsn,   flwoutn=flwoutn,  &
                                evapn=evapn,                         &
                                evapsn=evapsn,     evapin=evapin,    &
-                               Trefn=Trefn, TsfK=TsfK, Qrefn=Qrefn, & ! LM added TsfK
+                               Trefn=Trefn, Qrefn=Qrefn,            & ! LM added TsfK 697
                                freshn=freshn,     fsaltn=fsaltn,    &
                                fhocnn=fhocnn,                       &
                                fswthrun=fswthrun(n),                &

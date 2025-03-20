@@ -54,7 +54,7 @@
                                           sss,                &
                                           fsensn,   flatn,    &
                                           flwoutn,  fsurfn,   &
-                                          TsfK,               & ! LM added
+                                          !TsfK,               & ! 697
                                           fcondtop, fcondbot, &
                                           fadvheat, snoice,   &
                                           smice,    smliq)
@@ -95,8 +95,8 @@
          fcondtop    , & ! downward cond flux at top surface (W m-2)
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
-         flwoutn     , & ! upward LW at surface (W m-2)
-         TsfK            ! LM added (413)
+         flwoutn     !, & ! upward LW at surface (W m-2)
+         !TsfK            ! 697
 
     real (kind=dbl_kind), intent(out):: &
          fcondbot    , & ! downward cond flux at bottom surface (W m-2)
@@ -266,7 +266,7 @@
                                   Spond,       sss,        &
                                   hilyr,       hslyr,      &
                                   fcondtop,    fcondbot,   &
-                                  fadvheat,    TsfK,       & ! LM added TsfK
+                                  fadvheat,    &!TsfK,       & ! 697
                                   flwoutn,     fsensn,     &
                                   flatn,       fsurfn      )
 
@@ -310,7 +310,7 @@
                                     Spond,       sss,        &
                                     hilyr,       hslyr,      &
                                     fcondtop,    fcondbot,   &
-                                    fadvheat,    TsfK,       & ! LM added 414
+                                    fadvheat,    &!TsfK,       & ! 697
                                     flwoutn,     fsensn,     &
                                     flatn,       fsurfn      )
 
@@ -367,7 +367,7 @@
                                    Spond,       sss,        &
                                    hilyr,       hslyr,      &
                                    fcondtop,    fcondbot,   &
-                                   fadvheat,    TsfK,       & ! LM added
+                                   fadvheat,    &!TsfK,       & ! 697
                                    flwoutn,     fsensn,     &
                                    flatn,       fsurfn      )
 
@@ -388,8 +388,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          fsurfn      , & ! net flux to top surface, excluding fcondtop
-         fadvheat    , & ! flow of heat to ocean due to advection (W m-2)
-         TsfK            ! LM added
+         fadvheat    !, & ! flow of heat to ocean due to advection (W m-2)
+         !TsfK            ! 697
 
     real(kind=dbl_kind), intent(in) :: &
          Tsf0            ! snow surface temperature (C) at beginning of timestep
@@ -468,7 +468,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
-                          TsfK,               & ! LM added   error here.
+                          !TsfK,               & ! TsfK
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -513,7 +513,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
-                             TsfK,               & ! LM added -maybe here
+                             !TsfK,               & ! 697
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -566,7 +566,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
-                          TsfK,               &  ! LM added -possibly here
+                          !TsfK,               &  ! 697
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -615,7 +615,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
-                             TsfK,               & ! LM added -here2
+                             !TsfK,               & ! 697
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -670,7 +670,7 @@
                                      Spond,       sss,        &
                                      hilyr,       hslyr,      &
                                      fcondtop,    fcondbot,   &
-                                     fadvheat,    TsfK,       & ! LM added TsfK
+                                     fadvheat,    &!TsfK,       & ! 697
                                      flwoutn,     fsensn,     &
                                      flatn,       fsurfn      ) 
 
@@ -691,8 +691,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          fsurfn      , & ! net flux to top surface, excluding fcondtop
-         fadvheat    , & ! flow of heat to ocean due to advection (W m-2)
-         TsfK            ! LM added
+         fadvheat    !, & ! flow of heat to ocean due to advection (W m-2)
+         !TsfK            ! 697
 
     real(kind=dbl_kind), intent(in) :: &
          Tsf0            ! ice surface temperature (C) at beginning of timestep
@@ -773,7 +773,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
-                          TsfK,               & ! LM added here3
+                          !TsfK,               & ! 697
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -816,7 +816,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
-                             TsfK,               & ! LM added here 4
+                             !TsfK,               & ! 697
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -870,7 +870,7 @@
                           fcondtop, fcondbot, &
                           fadvheat,           &
                           flwoutn,  fsensn,   &
-                          TsfK,               & ! LM added here5
+                          !TsfK,               & ! 697
                           flatn,    fsurfn,   &
                           qpond,    qocn,     &
                           Spond,    sss,      &
@@ -918,7 +918,7 @@
                              fcondtop, fcondbot, &
                              fadvheat,           &
                              flwoutn,  fsensn,   &
-                             TsfK,               & ! LM added here6
+                             !TsfK,               & ! 697
                              flatn,    fsurfn,   &
                              qpond,    qocn,     &
                              Spond,    sss,      &
@@ -1112,7 +1112,7 @@
                            fcondtop, fcondbot, &
                            fadvheat,           &
                            flwoutn,  fsensn,   &
-                           TsfK,               & ! LM added here7
+                           !TsfK,               & ! 697
                            flatn,    fsurfn,   &
                            qpond,    qocn,     &
                            Spond,    sss,      &
@@ -1155,8 +1155,8 @@
          flwoutn       , & ! upward LW at surface (W m-2)
          fsensn        , & ! surface downward sensible heat (W m-2)
          flatn         , & ! surface downward latent heat (W m-2)
-         fsurfn        , & ! net flux to top surface, excluding fcondtop
-         TsfK              ! LM added
+         fsurfn        !, & ! net flux to top surface, excluding fcondtop
+         !TsfK              ! 697
 
     real(kind=dbl_kind), intent(in) :: &
          dt            , & ! time step (s)
@@ -1249,8 +1249,8 @@
                               potT,    Qa,     &
                               shcoef,  lhcoef, &
                               flwoutn, fsensn, &
-                              flatn,   fsurfn, &
-                              TsfK) ! LM added TsfK
+                              flatn,   fsurfn)!, &
+                              !TsfK) ! LM 697
        if (icepack_warnings_aborted(subname)) return
 
        ! derivative of heat flux with respect to surface temperature
@@ -1332,8 +1332,8 @@
                            potT,    Qa,     &
                            shcoef,  lhcoef, &
                            flwoutn, fsensn, &
-                           flatn,   fsurfn, &
-                           TsfK)  ! LM added TsfK
+                           flatn,   fsurfn)!, &
+                           !TsfK)  ! LM 697
     if (icepack_warnings_aborted(subname)) return
 
     ! if not converged
@@ -1358,7 +1358,7 @@
                                   fadvheat,           &
                                   flwoutn,  fsensn,   &
                                   flatn,    fsurfn,   &
-                                  TsfK,               & ! LM added -here?
+                                  !TsfK,               & ! LM 697
                                   qpond,    qocn,     &
                                   Spond,    sss,      &
                                   q,        dSdt,     &
@@ -1394,7 +1394,7 @@
                                    fadvheat,           &
                                    flwoutn,  fsensn,   &
                                    flatn,    fsurfn,   &
-                                   TsfK,               & ! LM added -or here?
+                                   !TsfK,               & ! 697
                                    qpond,    qocn,     &
                                    Spond,    sss,      &
                                    q,        dSdt,     &
@@ -1451,8 +1451,8 @@
          flwoutn       , & ! upward LW at surface (W m-2)
          fsensn        , & ! surface downward sensible heat (W m-2)
          flatn         , & ! surface downward latent heat (W m-2)
-         fsurfn        , & ! net flux to top surface, excluding fcondtop
-         TsfK              ! LM added
+         fsurfn        !, & ! net flux to top surface, excluding fcondtop
+         !TsfK              ! LM 697
 
     real(kind=dbl_kind), intent(in) :: &
          fcondtop      , & ! downward cond flux at top surface (W m-2)

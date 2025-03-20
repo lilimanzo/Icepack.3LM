@@ -103,8 +103,8 @@
                                    potT,    Qa,     &
                                    shcoef,  lhcoef, &
                                    flwoutn, fsensn, &
-                                   flatn,   fsurfn, &
-                                   TsfK) ! LM added TsfK
+                                   flatn,   fsurfn)!, &
+                                   !TsfK) ! LM 697
 
       ! input surface temperature
       real(kind=dbl_kind), intent(in) :: &
@@ -125,8 +125,8 @@
          fsensn      , & ! surface downward sensible heat (W m-2)
          flatn       , & ! surface downward latent heat (W m-2)
          flwoutn     , & ! upward LW at surface (W m-2)
-         fsurfn      , & ! net flux to top surface, excluding fcondtopn
-         TsfK            ! LM added output temp variable
+         fsurfn      !, & ! net flux to top surface, excluding fcondtopn
+         !TsfK            ! LM 697
 
       ! local variables
       real(kind=dbl_kind) :: &

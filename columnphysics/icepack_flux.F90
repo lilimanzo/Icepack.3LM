@@ -38,7 +38,7 @@
                                fswabsn,  flwoutn,    &
                                evapn,                &
                                evapsn,   evapin,     &
-                               Trefn, TsfK, Qrefn,   & ! LM added TsfK
+                               Trefn, Qrefn,         & ! TsfK 697
                                freshn,   fsaltn,     &
                                fhocnn,   fswthrun,   &
                                fswthrun_vdr, fswthrun_vdf,&
@@ -88,7 +88,7 @@
           evapsn  , & ! evaporation over snow           (kg/m2/s)
           evapin  , & ! evaporation over ice            (kg/m2/s)
           Trefn   , & ! air tmp reference level         (K)
-          TsfK    , & ! LM radiative temp               (K)
+          !TsfK    , & ! LM radiative temp               (K) 697
           Qrefn   , & ! air sp hum reference level      (kg/kg)
           freshn  , & ! fresh water flux to ocean       (kg/m2/s)
           fsaltn  , & ! salt flux to ocean              (kg/m2/s)
