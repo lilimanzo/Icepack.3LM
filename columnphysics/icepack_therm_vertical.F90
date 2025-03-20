@@ -2206,7 +2206,7 @@
                                     lmask_n     , lmask_s     , &
                                     mlt_onset   , frz_onset   , &
                                     yday        , prescribed_ice, &
-                                    zlvs        , afsdn, TsfKr) ! LM added TsfKr
+                                    zlvs        , afsdn)!, TsfKr) ! 697
 
       real (kind=dbl_kind), intent(in) :: &
          dt          , & ! time step
@@ -2256,7 +2256,7 @@
          congel      , & ! basal ice growth         (m/step-->cm/day)
          snoice      , & ! snow-ice formation       (m/step-->cm/day)
          Tref        , & ! 2m atm reference temperature           (K)
-         TsfKr       , & ! LM radiative temp                      (K)
+         !TsfKr       , & ! LM radiative temp                      (K) 697
          Qref        , & ! 2m atm reference spec humidity     (kg/kg)
          Uref        , & ! 10m atm reference wind speed         (m/s)
          Cdn_atm     , & ! atm drag coefficient
@@ -2934,7 +2934,7 @@
                                fiso_ocn=fiso_ocn,                   &
                                fiso_ocnn=fiso_ocnn,                 &
                                fiso_evap=fiso_evap,                 &
-                               fiso_evapn=fiso_evapn, TsfKr=TsfKr) ! LM added TsfKr
+                               fiso_evapn=fiso_evapn)!, TsfKr=TsfKr) ! 697
 
             if (icepack_warnings_aborted(subname)) return
 

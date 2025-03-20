@@ -65,8 +65,8 @@
                                Uref,     Urefn,      &
                                Qref_iso, Qrefn_iso,  &
                                fiso_ocn, fiso_ocnn,  &
-                               fiso_evap, fiso_evapn,&
-                               TsfKr) ! LM added
+                               fiso_evap, fiso_evapn)!,&
+                               !TsfKr) ! 697
 
       ! single category fluxes
       real (kind=dbl_kind), intent(in) :: &
@@ -123,7 +123,7 @@
           evaps   , & ! evaporation over snow           (kg/m2/s)
           evapi   , & ! evaporation over ice            (kg/m2/s)
           Tref    , & ! air tmp reference level         (K)
-          TsfKr   , & ! LM radiative temp               (K) 
+          !TsfKr   , & ! LM radiative temp               (K) 697
           Qref    , & ! air sp hum reference level      (kg/kg)
           fresh   , & ! fresh water flux to ocean       (kg/m2/s)
           fsalt   , & ! salt flux to ocean              (kg/m2/s)
@@ -196,10 +196,10 @@
          evapi      = evapi    + evapin    * aicen
       if (present(Trefn) .and. present(Tref)) &
          Tref       = Tref     + Trefn     * aicen
-      if (present(TsfK) .and. present(TsfKr)) &    ! LM added
+      !if (present(TsfK) .and. present(TsfKr)) &    ! 697
       !   TsfKr      = TsfKr    + TsfK     * aicen ! LM added
       !   TsfKr      = TsfKr    + ((-flwoutn/(5.67e-8))**0.25)   * aicen ! LM added
-         TsfKr = TsfK     * aicen 
+      !   TsfKr = TsfK     * aicen ! 697
       if (present(Qrefn) .and. present(Qref)) &
          Qref       = Qref     + Qrefn     * aicen
 
