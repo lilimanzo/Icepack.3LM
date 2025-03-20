@@ -2127,6 +2127,7 @@
                                     vsno        , vsnon       , &
                                     uvel        , vvel        , &
                                     Tsfc        , zqsn        , &
+                                    Tr          ,               & ! LM added
                                     zqin        , zSin        , &
                                     alvl        , vlvl        , &
                                     apnd        , hpnd        , &
@@ -2340,6 +2341,7 @@
          vicen       , & ! volume per unit area of ice            (m)
          vsnon       , & ! volume per unit area of snow           (m)
          Tsfc        , & ! ice/snow surface temperature, Tsfcn
+         Tr          , & ! LM radiative temperature
          alvl        , & ! level ice area fraction
          vlvl        , & ! level ice volume fraction
          apnd        , & ! melt pond area fraction
@@ -2991,6 +2993,8 @@
       !call ice_timer_stop(timer_ponds)
 
       first_call = .false.
+
+      Tr = Tsfc ! LM added
 
       end subroutine icepack_step_therm1
 
