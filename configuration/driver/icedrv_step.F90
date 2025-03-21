@@ -1123,6 +1123,7 @@
                          aicen=aicen(i,:),          vicen=vicen(i,:),   &
                          vsnon=vsnon(i,:),                              &
                          Tsfcn=trcrn(i,nt_Tsfc,:),                      &
+                         Trn=trcrn(i,nt_Tsfc,:),                        & ! LM added
                          alvln=trcrn(i,nt_alvl,:),                      &
                          apndn=trcrn(i,nt_apnd,:),                      &
                          hpndn=trcrn(i,nt_hpnd,:),                      &

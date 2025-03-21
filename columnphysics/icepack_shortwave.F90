@@ -3708,6 +3708,7 @@
                                         fbri,                &
                                         aicen,    vicen,     &
                                         vsnon,    Tsfcn,     &
+                                        Trn,                 & ! LM added
                                         alvln,    apndn,     &
                                         hpndn,    ipndn,     &
                                         aeron,               &
@@ -3771,6 +3772,7 @@
          vicen     , & ! ice volume in each category (m)
          vsnon     , & ! snow volume in each category (m)
          Tsfcn     , & ! surface temperature (deg C)
+         Trn       , & ! LM radiative temperature
          alvln     , & ! level-ice area fraction
          apndn     , & ! pond area fraction
          hpndn     , & ! pond depth (m)
