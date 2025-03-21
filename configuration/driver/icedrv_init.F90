@@ -1331,6 +1331,7 @@
 
       real (kind=dbl_kind) :: &
          Tsfc, sum, hbar, &
+         Tr, & ! LM added
          rhos, Lfresh, puny, rsnw_fall
 
       real (kind=dbl_kind), dimension(ncat) :: &
@@ -1432,6 +1433,7 @@
                                 Sprofile = salinz(i,:), &
                                 Tprofile = Tmltz(i,:),  &
                                 Tsfc     = Tsfc,        &
+                                Tr       = Tr,          & ! LM added
                                 qin=qin(:), qsn=qsn(:))
 
          ! floe size distribution
@@ -1501,6 +1503,7 @@
                                 Sprofile = salinz(i,:), &
                                 Tprofile = Tmltz(i,:),  &
                                 Tsfc     = Tsfc,        &
+                                Tr       = Tr,          &
                                 qin=qin(:), qsn=qsn(:))
          ! floe size distribution
          if (tr_fsd) call icepack_init_fsd(ice_ic=ice_ic, &

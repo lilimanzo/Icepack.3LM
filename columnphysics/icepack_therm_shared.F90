@@ -303,6 +303,7 @@
       subroutine icepack_init_enthalpy(Tair, Tf,      &
                                   Sprofile, Tprofile, &
                                   Tsfc,               &
+                                  Tr,                 & ! LM added
                                   qin,      qsn)
 
       real (kind=dbl_kind), intent(in) :: &
@@ -314,7 +315,8 @@
          Tprofile    ! vertical temperature profile (C)
 
       real (kind=dbl_kind), intent(out) :: &
-         Tsfc        ! surface temperature (C)
+         Tsfc, &     ! surface temperature (C)
+         Tr
 
       real (kind=dbl_kind), dimension(:), intent(out) :: &
          qin, &      ! ice enthalpy profile (J/m3)
@@ -333,8 +335,9 @@
 
       ! surface temperature
       Tsfc = Tf ! default
+      Tr = Tsfc ! LM added
       if (calc_Tsfc) Tsfc = min(Tsmelt, Tair - Tffresh) ! deg C
-
+        Tr = Tsfc ! LM added
         ! ice enthalpy
         do k = 1, nilyr
           ! assume linear temp profile and compute enthalpy
