@@ -2207,7 +2207,7 @@
                                     lmask_n     , lmask_s     , &
                                     mlt_onset   , frz_onset   , &
                                     yday        , prescribed_ice, &
-                                    zlvs        , afsdn, taf)!, TsfKr) ! 697 ! LM added taf 767
+                                    zlvs        , afsdn)!, TsfKr) ! 697 ! LM added taf 767
 
       real (kind=dbl_kind), intent(in) :: &
          dt          , & ! time step
@@ -2398,8 +2398,8 @@
          isosno     , &  ! snow isotope tracer               (kg/m^2)
          isoice          ! ice isotope tracer                (kg/m^2)
 
-      real (kind=dbl_kind), dimension(:), intent(out) :: &
-         taf             ! LM time adjustment factor 
+      !real (kind=dbl_kind), dimension(:), intent(out) :: &
+      !   taf             ! LM time adjustment factor 
 !autodocument_end
 
       ! local variables
@@ -2943,7 +2943,7 @@
 
             if (icepack_warnings_aborted(subname)) return
 
-            taf(n)=1.0 !flwout !(flwout-flw)/(5.67e-8*Tsfc(n)**4-flw) ! LM added
+            !taf(n)=1.0 !flwout !(flwout-flw)/(5.67e-8*Tsfc(n)**4-flw) ! LM added
 
          endif
 
